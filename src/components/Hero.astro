@@ -1,9 +1,17 @@
 ---
+import {Image} from "astro:assets";
+import myLogo from "@/assets/logo.svg";
+import facebook from "@/assets/facebook.svg"
+import instagram from "@/assets/instagram.svg"
+import whatsApp from "@/assets/whatsApp.svg"
 
 ---
 
-<section>
-  <div class="text-center my-100">
-    <h1 class="text-3xl">Index</h1>
+<section aria-label="Hero section" class="grid gap-7 justify-items-center text-center py-10">
+  <Image src={myLogo} alt="Logo" class="h-30 md:h-50 w-auto" />
+  <div class="flex gap-4">
+    <a href=""><Image src={facebook} alt="FB" class="h-8 md:h-10 w-auto" /></a>
+    <a href=""><Image src={instagram} alt="IG" class="h-8 md:h-10 w-auto" /></a>
+    <a href=""><Image src={whatsApp} alt="WA" class="h-8 md:h-10 w-auto" /></a>
   </div>
 </section>
