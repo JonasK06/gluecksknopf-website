@@ -5,13 +5,35 @@ import facebook from "@/assets/facebook.svg"
 import instagram from "@/assets/instagram.svg"
 import whatsApp from "@/assets/whatsApp.svg"
 
+const links = [
+  {
+    title : "FB",
+    icon : facebook,
+    href : "https://facebook.de"
+  },
+  {
+    title : "IG",
+    icon : instagram,
+    href : "https://instagram.de"
+  },
+  {
+    title : "WA",
+    icon : whatsApp,
+    href : "https://whatsapp.com"
+  }
+];
 ---
 
-<section aria-label="Hero section" class="grid gap-7 justify-items-center text-center py-10">
-  <Image src={myLogo} alt="Logo" class="h-30 md:h-50 w-auto" />
-  <div class="flex gap-4">
-    <a href=""><Image src={facebook} alt="FB" class="h-8 md:h-10 w-auto" /></a>
-    <a href=""><Image src={instagram} alt="IG" class="h-8 md:h-10 w-auto" /></a>
-    <a href=""><Image src={whatsApp} alt="WA" class="h-8 md:h-10 w-auto" /></a>
-  </div>
+<section aria-label="Hero section" class="flex flex-col items-center gap-space-md py-section">
+  <Image src={myLogo} alt="Logo" class="size-icon-xl w-auto" />
+  <ul class="flex justify-center gap-space-xs">
+    {links.map((i) => (
+      <li>
+        <a href={i.href} target="_blank" class="hover:opacity-80 block p-1">
+          <Image src={i.icon} alt={i.title} class="size-icon-md w-auto" />
+        </a>
+      </li>
+    ))}
+  </ul>
+
 </section>
