@@ -18,17 +18,17 @@ const navData = [
 ];
 ---
 
-<nav class="bg-surface shadow-lg sticky top-0 right-0 left-0">
-  <ul class="flex justify-center items-center font-bold text-lg">
+<nav class="bg-surface shadow-lg sticky top-0 right-0 left-0 flex items-center justify-center">
+  <ul class="flex justify-center items-center font-bold text-lg h-full">
     {
       navData.map(i => {
         const hasIcon = i.href === "/";
         return (
-          <li>
-            <a href={i.href} class="p-5">
+          <li class="hover:underline hover:scale-105 h-full flex items-center">
+            <a href={i.href} class="px-4 py-2 inline-flex justify-center items-center">
               {
                 hasIcon ? (
-                  <Image src={myLogo} alt="Logo" class="size-icon-lg w-auto" />
+                  <Image src={myLogo} alt="Logo" class="size-icon-lg hover:opacity-80"/>
                 ) : i.title
               }
             </a>

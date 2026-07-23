@@ -29,11 +29,10 @@ const links = [
   <ul class="flex justify-center gap-space-xs">
     {links.map((i) => (
       <li>
-        <a href={i.href} target="_blank" class="hover:opacity-80 block p-1">
+        <a href={i.href} target="_blank" class="hover:opacity-80 hover:scale-105 block p-1">
           <Image src={i.icon} alt={i.title} class="size-icon-md w-auto" />
         </a>
       </li>
     ))}
   </ul>
-
 </section>

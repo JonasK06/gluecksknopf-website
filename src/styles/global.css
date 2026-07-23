@@ -10,8 +10,8 @@
   --color-accent: #f59e0b;
 
   /* Hintergründe & Flächen */
-  --color-bg-main: #f8fafc;
-  --color-surface: #fdf9e9;
+  --color-bg-main: #dfdfdf;
+  --color-surface: #fffbda;
   --color-subtle: #f1f5f9;
 
   /* Textfarben */
@@ -45,13 +45,13 @@
   --spacing-space-xl: clamp(3.5rem, 2.5rem + 4vw, 6.5rem);        /* ~56px -> 104px */
 
   /* Semantische Layout-Abstände */
-  --spacing-section: clamp(2.5rem, 1.5rem + 5vw, 5rem);
+  --spacing-section: clamp(1.5rem, 1.5rem + 5vw, 4rem);
 
   /* Wiederverwendbare Elementgrößen */
   --size-icon-sm: clamp(1.25rem, 1.5rem + 0.5vw, 2rem);
   --size-icon-md: clamp(2rem, 2rem + 1.5vw, 3.5rem);
   --size-icon-lg: clamp(4.5rem, 3rem + 5vw, 6rem);
-  --size-icon-xl: clamp(7.5rem, 5rem + 10vw, 15rem);
+  --size-icon-xl: clamp(10rem, 7rem + 15vw, 25rem);
 
   /* CONTAINER-BREITEN (Max Widths)*/
   --container-content: 65ch;

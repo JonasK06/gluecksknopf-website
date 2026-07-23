@@ -1,0 +1,18 @@
+import {defineCollection} from "astro:content";
+import { z } from "astro/zod";
+import {glob} from "astro/loaders";
+
+const imageCollection = defineCollection({
+  loader: glob({ pattern: '**/[^_]*.md', base: './src/content/bilderDefinition/' }),
+  schema: ({image}) => z.object({
+    title: z.string(),
+    description: z.string(),
+    category: z.string(),
+    publishDate: z.date(),
+    order: z.number().default(0),
+    hideInCarousel: z.boolean().default(false),
+    coverImage: image()
+  }),
+});
+
+export const collections = { imageCollection };
